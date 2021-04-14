@@ -1,0 +1,15 @@
+CREATE TABLE `studentipa`.`junction` (
+  `ID_movie` INT NOT NULL,
+  `ID_genre` INT NOT NULL,
+  INDEX `ID_genre_idx` (`ID_genre` ASC) VISIBLE,
+  PRIMARY KEY (`ID_genre`, `ID_movie`),
+  CONSTRAINT `ID_movie`
+    FOREIGN KEY (`ID_movie`)
+    REFERENCES `studentipa`.`movies` (`ID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `ID_genre`
+    FOREIGN KEY (`ID_genre`)
+    REFERENCES `studentipa`.`genres` (`ID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);

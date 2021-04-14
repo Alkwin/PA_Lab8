@@ -1,0 +1,8 @@
+CREATE TABLE `studentipa`.`movies` (
+    `ID` INT NOT NULL,
+    `title` VARCHAR(20) NOT NULL,
+    `release_date` DATETIME NOT NULL,
+    `duration` INT NOT NULL,
+    `score` INT NOT NULL,
+    PRIMARY KEY (`ID`),
+    UNIQUE INDEX `ID_UNIQUE` (`ID` ASC) VISIBLE);

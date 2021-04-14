@@ -1,0 +1,5 @@
+CREATE TABLE `studentipa`.`genres` (
+    `ID` INT NOT NULL,
+    `name` VARCHAR(20) NOT NULL,
+    PRIMARY KEY (`ID`),
+    UNIQUE INDEX `ID_UNIQUE` (`ID` ASC) VISIBLE);
